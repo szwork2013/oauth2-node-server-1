@@ -1,0 +1,83 @@
+{
+  "name": "oauth2-node-server",
+  "version": "0.0.1",
+  "description": "Small example that uses oauth2 and mongoose",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp",
+    "lint": "gulp lint",
+    "test": "gulp mocha",
+    "commit": "git-cz",
+    "report-coverage": "coveralls < ./coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jermorin/oauth2-node-server.git"
+  },
+  "keywords": [
+    "oauth2",
+    "server"
+  ],
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "express": "^3.4.8",
+    "jade": "*",
+    "mongoose": "*",
+    "node-oauth2-server": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.5.1",
+    "babel-core": "6.5.2",
+    "babel-plugin-add-module-exports": "0.1.2",
+    "babel-preset-es2015": "6.5.0",
+    "babel-preset-stage-2": "6.5.0",
+    "chai": "^3.4.1",
+    "commitizen": "2.5.0",
+    "coveralls": "^2.11.6",
+    "cz-conventional-changelog": "1.1.5",
+    "del": "^2.2.0",
+    "ghooks": "1.0.3",
+    "gulp": "^3.9.0",
+    "gulp-babel": "6.1.2",
+    "gulp-env": "^0.4.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "isparta": "4.0.0",
+    "mocha": "^2.3.4",
+    "run-sequence": "^1.1.5",
+    "supertest": "^1.1.0",
+    "supertest-as-promised": "^3.0.0",
+    "validate-commit-msg": "2.0.0"
+  },
+  "author": "Jermorin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jermorin/oauth2-node-server/issues"
+  },
+  "homepage": "https://github.com/Jermorin/oauth2-node-server#readme",
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint && npm test",
+      "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
