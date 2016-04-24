@@ -110,7 +110,7 @@
 
 - [x] Build gulp
 - [ ] Mongoose connection
-- [ ] Mongoose model
+- [x] Mongoose model
 - [ ] Connection form
 - [ ] POST /users
 - [ ] GET /account
